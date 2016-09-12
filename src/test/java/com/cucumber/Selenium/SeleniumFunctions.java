@@ -1,11 +1,14 @@
 package com.cucumber.Selenium;
 
+import java.io.File;
 import java.net.MalformedURLException;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxBinary;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -18,8 +21,11 @@ public class SeleniumFunctions {
 
 	public void createDriver() throws MalformedURLException,
 			InterruptedException {
-
-		driver = new FirefoxDriver();
+		File pathToBinary = new File("C:\\Program Files\\Mozilla Firefox\\firefox.exe");
+		FirefoxBinary ffBinary = new FirefoxBinary(pathToBinary);
+		FirefoxProfile firefoxProfile = new FirefoxProfile();       
+		driver = new FirefoxDriver(ffBinary,firefoxProfile);
+		//driver = new FirefoxDriver();
 		
 
 		driver.manage().window().maximize();
