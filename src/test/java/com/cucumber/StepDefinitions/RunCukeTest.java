@@ -12,6 +12,7 @@ import cucumber.api.junit.Cucumber;
 		plugin = { 
 					"pretty",
 					"html:target/cucumber",
+					"json:target/cucumber.json",
 				} 
 		
 		)

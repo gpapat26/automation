@@ -50,7 +50,7 @@ public class SeleniumFunctions {
 	}
 
 	public void clickSigninLink() {
-		driver.findElement(By.linkText("AAAAASign in WRONG!!!!!!!!!")).click();
+		driver.findElement(By.linkText("Sign in")).click();
 	}
 
 	public void isloginsectionDisplayed() {
