@@ -15,6 +15,7 @@ import cucumber.api.junit.Cucumber;
 		monochrome=true,
 		plugin = { "pretty",
 				"html:target/koukou_sanity.html"
+				,"json:target/koukou_sanity.json"
 				}
 		)
 public class SomeOtherParallelTest {

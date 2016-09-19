@@ -26,6 +26,7 @@ import cucumber.api.junit.Cucumber;
 		monochrome=true,
 		plugin = { "pretty",
 				"html:target/cucumber_regression.html"
+				,"json:target/cucumber_regression.json"
 				}
 		)
 public class RunCukeTest {

@@ -15,6 +15,7 @@ import cucumber.api.junit.Cucumber;
 		monochrome=true,
 		plugin = { "pretty",
 				"html:target/cucumber_sanity.html"
+				,"json:target/cucumber_sanity.json"
 				}
 		)
 public class RunDublicateTest {
