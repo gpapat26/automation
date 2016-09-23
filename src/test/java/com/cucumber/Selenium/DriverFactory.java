@@ -37,8 +37,8 @@ public class DriverFactory {
 		System.out.println("URL= " + baseURL);
 
 		initateDriver();
-		OpenURL(baseURL);
-		Thread.sleep(2000);
+		//OpenURL(baseURL);
+		//Thread.sleep(2000);
 	}
 
 	public   void initateDriver() {

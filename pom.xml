@@ -39,7 +39,7 @@
            <source>1.7</source>
            <target>1.7</target>
           <parallel>classes</parallel>
-          <threadCount>4</threadCount>
+          <threadCount>5</threadCount>
         </configuration>
         <dependencies>
 	      	<dependency>

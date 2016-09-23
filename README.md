@@ -1,2 +1,5 @@
 # automation
-Automation with Cucumber-Java and Jenkins Integration
+Parallel automation with Cucumber-JVM and Jenkins Integration
+Create 5 Scenarios that proove to run in parallel 
+
+
