@@ -1,6 +1,8 @@
 package com.cucumber.Selenium;
 
 import java.io.File;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.Platform;
@@ -9,6 +11,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxBinary;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxProfile;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 /**
@@ -30,13 +34,16 @@ public class DriverFactory {
 	
 
 
-	public   void createDriver() throws InterruptedException {
+	public   void createDriver() throws InterruptedException, MalformedURLException {
 
 		System.out.println("Browser= " + browser);
 		System.out.println("Platform= " + currentOS);
 		System.out.println("URL= " + baseURL);
-
-		initateDriver();
+		
+		//Run Local
+		//initateDriver();
+		//Run remotly
+		initiateRemoteDriver();
 		//OpenURL(baseURL);
 		//Thread.sleep(2000);
 	}
@@ -48,7 +55,14 @@ public class DriverFactory {
 		FirefoxBinary ffBinary = new FirefoxBinary(pathToBinary);
 		FirefoxProfile firefoxProfile = new FirefoxProfile();       
 		driver = new FirefoxDriver(ffBinary,firefoxProfile);
-		//driver = new FirefoxDriver(); 
+		
+	}
+	
+	public void initiateRemoteDriver() throws MalformedURLException{
+		
+		DesiredCapabilities capabilities = DesiredCapabilities.firefox();
+		capabilities.setCapability("marionette", true);
+		driver = new FirefoxDriver(capabilities);
 	}
 
 	public   void OpenURL(String baseURL) {

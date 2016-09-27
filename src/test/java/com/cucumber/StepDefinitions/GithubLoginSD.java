@@ -176,7 +176,7 @@ public class GithubLoginSD {
 	}
 
 	@When("^user2 clicks on Sign in button$")
-	public void user2_clicks_on_Sign_in_button() throws InterruptedException {
+	public void user2_clicks_on_Sign_in_button() throws InterruptedException, MalformedURLException {
 		//po.clickSigninLink();
 		
 		//po.clickSigninLink();
@@ -328,7 +328,7 @@ public class GithubLoginSD {
 	}
 
 	@When("^user3 clicks on Sign in button$")
-	public void user3_clicks_on_Sign_in_button() throws InterruptedException {
+	public void user3_clicks_on_Sign_in_button() throws InterruptedException, MalformedURLException {
 		System.out.println(String.format("execute thread from  WHEN user3 clicks on Sign in button : %s",Thread.currentThread().getName() ));
 
 		//po.clickSigninLink();
